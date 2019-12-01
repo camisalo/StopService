@@ -40,13 +40,17 @@ public class StopService {
 
     public Stop getStopById(Integer id) {
         Stop stop = stopRepository.findStopById(id);
-        this.addNextStop(stop);
+        if (stop != null) {
+            this.addNextStop(stop);
+        }
         return stop;
     }
 
     public Stop getStopByName(String name) {
         Stop stop = stopRepository.findStopByName(name);
-        this.addNextStop(stop);
+        if (stop != null) {
+            this.addNextStop(stop);
+        }
         return stop;
     }
 
