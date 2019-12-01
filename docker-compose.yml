@@ -9,11 +9,11 @@ services:
     links:
       - dbmysql
     ports:
-      - 8081:8080
+      - 8090:8080
 
 
   dbmysql:
-    image: mysql
+    image: hypriot/rpi-mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
